@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paytm</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300&family=Poppins:wght@100;300;400&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&family=Poppins:wght@100;300;400&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- श्री गणेशाय नमः  -->
+ <section id="topsection">
+    <table >
+        <tr>
+            <td>&larr;</td>
+            <td style="padding-left: 70px
+            ; padding-right: 60px;" ><img src="/images/Paytm_Logo.jpg" alt="paytm"></td>
+            <td id="Help" style="color: #00baf2; font-weight: 600;">Help
+
+            </td>
+        </tr>
+    </table>
+    
+ </section>
+
+ <section class="main" style="border-radius: 10px; background-color: #e7eff9  ">
+<div id="jan-logo">
+    <img src="/images/j-logo.jpg">
+</div>
+<div id="location">
+    <p id="L1">Bhuyangdev &rarr; Parasnagar</p>
+    <p style="font-size: 10px; color: #7f8283;">AC</p>
+    <p style="font-size: 10px;color: #7f8283;">1 Adult Ticket</p>
+    <img  style="width: 30px; border-radius: 100px; " src="/images/men-logo.jpg" alt="">
+
+</div>
+<div id="payment">
+  <span style="font-size: 25px; font-family: 'Roboto', sans-serif;"> &#x20B9;4</span>  <img src="/images/Paid icon.png" style="width: 20px;">
+
+</div>
+<div style="  font-family: 'Roboto', sans-serif; font-size: 10px; text-align: center; color: #636464; font-weight:600;"  >
+    <p>TICKET BOOKED SUCCESSFULLY</p>
+</div>
+<div style="font-family: 'Roboto', sans-serif; font-size: 8px; text-align: center; color: #9fa2a3; margin-top: 20px;">
+    <p>02 Jun 2023, 10:29 PM</p>
+</div>
+<div class="counter">
+    <p style="text-align: center; font-size: 12px;" >Your ticket is valid for</p>
+        <table style="text-align: center; padding-bottom: 20px;">
+            
+          <tr style="font-size: 30px;">
+            <td id="hours"></td>
+            <td id="mins"></td>
+            <td id="secs"></td>
+          </tr>
+          <tr style="font-size: 10px;">
+            <td>HOURS</td>
+            <td>MINUTES</td>
+            <td>SECONDS</td>
+          </tr>
+        </table>
+        <button>View Your Tickets</button>
+    </div>
+    <div style="background-color: #00baf2; height: 7px; ">
+
+    </div>
+    <div style="background-color: #293f8f; height: 7px; ">
+
+    </div>
+        
+ </section>
+
+<script>
+    // The data/time we want to countdown to
+    var countDownDate = new Date("Augest 06, 2023 22:22:30").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        
+    // Result is output to the specific element
+    
+    document.getElementById("hours").innerHTML = hours + " : " 
+    document.getElementById("mins").innerHTML = minutes + " : " 
+    document.getElementById("secs").innerHTML = seconds + " " 
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        
+        document.getElementById("hours").innerHTML = "" 
+        document.getElementById("mins").innerHTML = ""
+        document.getElementById("secs").innerHTML = ""
+        document.getElementById("end").innerHTML = "TIcket Expired!!";
+    }
+    }, 1000);
+    </script>
+</body>
+</html>
